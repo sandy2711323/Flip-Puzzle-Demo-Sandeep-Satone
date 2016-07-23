@@ -1,0 +1,90 @@
+/* --------------------------------------------------------
+Style Sheet for Flip Puzzle Demo-Sandeep Satone
+
+version: 1.0
+last modified: 23.07.2016 by Sandeep Satone
+author: Sandeep Satone
+website: http://sandeepbalramsatone.com/
+----------------------------------------------------------*/
+/*Making the default padding and margin as 0px*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*formating container to bring it to centre of the page and give a box shadow*/
+
+#container {
+    position: fixed;
+    /* or absolute */
+    /*  top: 5%;*/
+    left: 30%;
+    border: 1px black solid;
+    box-shadow: 5px 5px 10px #888888;
+    padding: 0px;
+}
+
+
+/*formating each row */
+
+#container [id^=row] {
+    display: inline-block;
+    float: left;
+    margin: 5px 5px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/*Targeting each cell */
+
+#container [id^=row] [id^=column]:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+/*Setting the trasition time and style*/
+
+#container [id^=row] [id^=column] {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/*hiding the back and formating the front and back tile*/
+
+#front,
+#back {
+    border: 1px white solid;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+
+/* front pane, placed above back */
+
+#front {
+    z-index: 2;
+    /* for firefox 31 */
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+
+/* back, initially hidden pane */
+
+#back {
+    margin-top: -150px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
