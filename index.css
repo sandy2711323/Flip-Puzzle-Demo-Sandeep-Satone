@@ -19,7 +19,7 @@ website: http://sandeepbalramsatone.com/
 #container {
     position: fixed;
     /* or absolute */
-    /*  top: 5%;*/
+      top: 5%;
     left: 30%;
     border: 1px black solid;
     box-shadow: 5px 5px 10px #888888;
@@ -68,6 +68,12 @@ website: http://sandeepbalramsatone.com/
     backface-visibility: hidden;
     width: 150px;
     height: 150px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
 }
 
 
