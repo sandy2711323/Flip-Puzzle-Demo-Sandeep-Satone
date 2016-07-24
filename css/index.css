@@ -42,11 +42,14 @@ website: http://sandeepbalramsatone.com/
 
 /*Targeting each cell */
 
-#container [id^=row] [id^=column]:hover {
+/*#container [id^=row] [id^=column]:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}*/
+.hoverTrue {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
-
 
 /*Setting the trasition time and style*/
 
